@@ -48,16 +48,52 @@ Array.from(newNav).forEach((item, index) => {
 
 const ctaText = document.querySelector('.cta-text');
 const ctaImg = document.querySelector('#cta-img');
-const midImg = document.querySelector('#middle-img');
+
 
 ctaText.querySelector('h1').textContent = siteContent.cta['h1'];
 ctaText.querySelector('button').textContent = siteContent.cta['button'];
 ctaImg.src = siteContent.cta['img-src'];
+
+
+const midheadfeatures = document.querySelector('.text-content:nth-child(1) h4');
+const midtextfeatures = document.querySelector('.text-content:nth-child(1) p');
+const midheadabout = document.querySelector('.text-content:nth-child(2) h4');
+const midtextabout = document.querySelector('.text-content:nth-child(2) p');
+
+midheadfeatures.textContent = siteContent['main-content']['features-h4'];
+midtextfeatures.textContent = siteContent['main-content']['features-content'];
+midheadabout.textContent = siteContent['main-content']['about-h4'];
+midtextabout.textContent = siteContent['main-content']['about-content'];
+
+const midImg = document.querySelector('#middle-img');
 midImg.src = siteContent['main-content']['middle-img-src'];
 
-const midtext = document.querySelectorAll('.text-content');
-const mainContent = siteContent['main-content'];
+const midheadservices = document.querySelector('.bottom-content .text-content:nth-child(1) h4');
+const midtextservices = document.querySelector('.bottom-content .text-content:nth-child(1) p');
+const midheadproduct = document.querySelector('.bottom-content .text-content:nth-child(2) h4');
+const midtextproduct = document.querySelector('.bottom-content .text-content:nth-child(2) p');
+const midheadvision = document.querySelector('.bottom-content .text-content:nth-child(3) h4');
+const midtextvision = document.querySelector('.bottom-content .text-content:nth-child(3) p');
 
-midtext.querySelector('about-h4').textContent = siteContent['main-content']['about-h4'];
+midheadservices.textContent = siteContent['main-content']['services-h4'];
+midtextservices.textContent = siteContent['main-content']['services-content'];
+midheadproduct.textContent = siteContent['main-content']['product-h4'];
+midtextproduct.textContent = siteContent['main-content']['product-content'];
+midheadvision.textContent = siteContent['main-content']['vision-h4'];
+midtextvision.textContent = siteContent['main-content']['vision-content'];
 
-midtext.querySelectorAll('p').textContent = siteContent['main-content']['p'];
+const contactinfo = document.querySelector('.contact');
+const contactpone = document.querySelector('.contact .text-content:nth-child(1) p');
+const contactptwo = document.querySelector('.contact .text-content:nth-child(2) p');
+const contactpthree = document.querySelector('.contact .text-content:nth-child(3) p');
+
+contactinfo.querySelector('h4').textContent = siteContent.contact['contact-h4'];
+contactpone.querySelector('p').textContent = siteContent.contact['address'];
+contactptwo.querySelector('p').textContent = siteContent.contact['phone'];
+contactpthree.querySelector('p').textContent = siteContent.contact['email'];
+
+// const ctaText = document.querySelector('.cta-text');
+// const ctaImg = document.querySelector('#cta-img');
+
+
+// ctaText.querySelector('h1').textContent = siteContent.cta['h1'];
