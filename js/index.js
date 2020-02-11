@@ -39,4 +39,85 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent.nav["img-src"]);
+
+let newNav = document.getElementsByTagName('a');
+Array.from(newNav).forEach((item, index) => {
+  newNav[index].textContent = siteContent.nav[`nav-item-${index + 1}`];
+});
+
+const ctaText = document.querySelector('.cta-text');
+const ctaImg = document.querySelector('#cta-img');
+
+
+ctaText.querySelector('h1').textContent = siteContent.cta['h1'];
+ctaText.querySelector('button').textContent = siteContent.cta['button'];
+ctaImg.src = siteContent.cta['img-src'];
+
+
+const midheadfeatures = document.querySelector('.text-content:nth-child(1) h4');
+const midtextfeatures = document.querySelector('.text-content:nth-child(1) p');
+const midheadabout = document.querySelector('.text-content:nth-child(2) h4');
+const midtextabout = document.querySelector('.text-content:nth-child(2) p');
+
+midheadfeatures.textContent = siteContent['main-content']['features-h4'];
+midtextfeatures.textContent = siteContent['main-content']['features-content'];
+midheadabout.textContent = siteContent['main-content']['about-h4'];
+midtextabout.textContent = siteContent['main-content']['about-content'];
+
+const midImg = document.querySelector('#middle-img');
+midImg.src = siteContent['main-content']['middle-img-src'];
+
+const midheadservices = document.querySelector('.bottom-content .text-content:nth-child(1) h4');
+const midtextservices = document.querySelector('.bottom-content .text-content:nth-child(1) p');
+const midheadproduct = document.querySelector('.bottom-content .text-content:nth-child(2) h4');
+const midtextproduct = document.querySelector('.bottom-content .text-content:nth-child(2) p');
+const midheadvision = document.querySelector('.bottom-content .text-content:nth-child(3) h4');
+const midtextvision = document.querySelector('.bottom-content .text-content:nth-child(3) p');
+
+midheadservices.textContent = siteContent['main-content']['services-h4'];
+midtextservices.textContent = siteContent['main-content']['services-content'];
+midheadproduct.textContent = siteContent['main-content']['product-h4'];
+midtextproduct.textContent = siteContent['main-content']['product-content'];
+midheadvision.textContent = siteContent['main-content']['vision-h4'];
+midtextvision.textContent = siteContent['main-content']['vision-content'];
+
+const contactinfo = document.querySelector('.contact h4');
+const contactpone = document.querySelectorAll('.contact  p');
+const contactptwo = document.querySelectorAll('.contact p');
+const contactpthree = document.querySelectorAll('.contact p');
+
+contactinfo.textContent = siteContent.contact['contact-h4'];
+contactpone[0].textContent = siteContent.contact['address'];
+contactptwo[1].textContent = siteContent.contact['phone'];
+contactpthree[2].textContent = siteContent.contact['email'];
+
+const footerstuff = document.querySelector('footer p');
+
+footerstuff.textContent = siteContent.footer['copyright'];
+
+
+const greennav = document.getElementsByTagName('a');
+
+Array.from(greennav).forEach( link => {
+  link.style.color = 'green';
+});
+
+const navitem = document.querySelector('nav');
+
+const preppy = document.createElement('a');
+
+preppy.textContent = 'Click Me';
+preppy.style.color = 'green';
+navitem.prepend(preppy);
+
+
+const navy = document.createElement('a')
+
+navy.textContent = 'Blog'
+navy.style.color = 'green';
+navitem.appendChild(navy);
+
+
+
+
