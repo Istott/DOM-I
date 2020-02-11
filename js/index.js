@@ -95,3 +95,29 @@ contactpthree[2].textContent = siteContent.contact['email'];
 const footerstuff = document.querySelector('footer p');
 
 footerstuff.textContent = siteContent.footer['copyright'];
+
+
+const greennav = document.getElementsByTagName('a');
+
+Array.from(greennav).forEach( link => {
+  link.style.color = 'green';
+});
+
+const navitem = document.querySelector('nav');
+
+const preppy = document.createElement('a');
+
+preppy.textContent = 'Click Me';
+preppy.style.color = 'green';
+navitem.prepend(preppy);
+
+
+const navy = document.createElement('a')
+
+navy.textContent = 'Blog'
+navy.style.color = 'green';
+navitem.appendChild(navy);
+
+
+
+
