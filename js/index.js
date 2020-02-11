@@ -82,18 +82,16 @@ midtextproduct.textContent = siteContent['main-content']['product-content'];
 midheadvision.textContent = siteContent['main-content']['vision-h4'];
 midtextvision.textContent = siteContent['main-content']['vision-content'];
 
-const contactinfo = document.querySelector('.contact');
-const contactpone = document.querySelector('.contact .text-content:nth-child(1) p');
-const contactptwo = document.querySelector('.contact .text-content:nth-child(2) p');
-const contactpthree = document.querySelector('.contact .text-content:nth-child(3) p');
+const contactinfo = document.querySelector('.contact h4');
+const contactpone = document.querySelectorAll('.contact  p');
+const contactptwo = document.querySelectorAll('.contact p');
+const contactpthree = document.querySelectorAll('.contact p');
 
-contactinfo.querySelector('h4').textContent = siteContent.contact['contact-h4'];
-contactpone.querySelector('p').textContent = siteContent.contact['address'];
-contactptwo.querySelector('p').textContent = siteContent.contact['phone'];
-contactpthree.querySelector('p').textContent = siteContent.contact['email'];
+contactinfo.textContent = siteContent.contact['contact-h4'];
+contactpone[0].textContent = siteContent.contact['address'];
+contactptwo[1].textContent = siteContent.contact['phone'];
+contactpthree[2].textContent = siteContent.contact['email'];
 
-// const ctaText = document.querySelector('.cta-text');
-// const ctaImg = document.querySelector('#cta-img');
+const footerstuff = document.querySelector('footer p');
 
-
-// ctaText.querySelector('h1').textContent = siteContent.cta['h1'];
+footerstuff.textContent = siteContent.footer['copyright'];
